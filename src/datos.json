@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "title": "Assassin's Creed: Origins",
+    "description": "Embárcate en una aventura en el antiguo Egipto. Descubre la historia de los orígenes de los Asesinos.",
+    "price": 49.99,
+    "thumbnail": "url_imagen_1.jpg",
+    "code": "ABC123",
+    "stock": 50,
+    "status": true,
+    "category": "Acción y Aventuras"
+  },
+  {
+    "id": 2,
+    "title": "The Witcher 3: Wild Hunt",
+    "description": "Explora un mundo abierto lleno de monstruos, magia y decisiones morales. ¡Caza al brujo Geralt de Rivia!",
+    "price": 39.99,
+    "thumbnail": "url_imagen_2.jpg",
+    "code": "DEF456",
+    "stock": 30,
+    "status": true,
+    "category": "RPG"
+  },
+  {
+    "id": 3,
+    "title": "Destiny 2",
+    "description": "Únete a los Guardianes y defiende la última ciudad en la Tierra contra las fuerzas alienígenas.",
+    "price": 59.99,
+    "thumbnail": "url_imagen_3.jpg",
+    "code": "GHI789",
+    "stock": 20,
+    "status": true,
+    "category": "Shooter"
+  },
+  {
+    "id": 4,
+    "title": "Final Fantasy XV",
+    "description": "Embárcate en un viaje épico con el príncipe Noctis y sus amigos para salvar su reino de la oscuridad.",
+    "price": 69.99,
+    "thumbnail": "url_imagen_4.jpg",
+    "code": "JKL012",
+    "stock": 15,
+    "status": true,
+    "category": "RPG"
+  },
+  {
+    "id": 5,
+    "title": "Overwatch",
+    "description": "Forma parte de un equipo de héroes y lucha por el futuro en este shooter de acción en primera persona.",
+    "price": 29.99,
+    "thumbnail": "url_imagen_5.jpg",
+    "code": "MNO345",
+    "stock": 25,
+    "status": true,
+    "category": "Shooter"
+  },
+  {
+    "id": 6,
+    "title": "Minecraft",
+    "description": "Construye y explora tu propio mundo en este juego de construcción y aventuras en bloque.",
+    "price": 19.99,
+    "thumbnail": "url_imagen_6.jpg",
+    "code": "PQR678",
+    "stock": 10,
+    "status": true,
+    "category": "Simulación"
+  },
+  {
+    "id": 7,
+    "title": "FIFA 22",
+    "description": "Experimenta la emoción del fútbol con gráficos realistas y modos de juego emocionantes.",
+    "price": 79.99,
+    "thumbnail": "url_imagen_7.jpg",
+    "code": "STU901",
+    "stock": 40,
+    "status": true,
+    "category": "Deportes"
+  },
+  {
+    "id": 8,
+    "title": "Doom Eternal",
+    "description": "Enfréntate a hordas de demonios en este frenético shooter en primera persona. ¡La tierra está condenada!",
+    "price": 89.99,
+    "thumbnail": "url_imagen_8.jpg",
+    "code": "VWX234",
+    "stock": 5,
+    "status": true,
+    "category": "Shooter"
+  },
+  {
+    "id": 9,
+    "title": "Cyberpunk 2077",
+    "description": "Sumérgete en Night City, una metrópolis obsesionada con el poder, la moda y la modificación corporal.",
+    "price": 99.99,
+    "thumbnail": "url_imagen_9.jpg",
+    "code": "YZA567",
+    "stock": 35,
+    "status": true,
+    "category": "RPG"
+  },
+  {
+    "id": 10,
+    "title": "Star Wars Jedi: Fallen Order",
+    "description": "Conviértete en un joven Padawan que sobrevivió a la Orden 66 y explora la galaxia de Star Wars.",
+    "price": 109.99,
+    "thumbnail": "url_imagen_10.jpg",
+    "code": "BCD890",
+    "stock": 18,
+    "status": true,
+    "category": "Acción y Aventuras"
+  },
+  {
+    "id": 11,
+    "title": "Borderlands 3",
+    "description": "Únete a los Cazadores de la Cripta y lucha contra pandillas alienígenas en este juego de disparos en primera persona lleno de humor y caos.",
+    "price": 49.99,
+    "thumbnail": "url_imagen_12.jpg",
+    "code": "HIJ456",
+    "stock": 28,
+    "status": true,
+    "category": "Shooter"
+  }
+]
