@@ -1,85 +1,90 @@
-const fs = require('fs');
+const fs = require('fs')
 
 class CartManager {
     constructor(filePath) {
-        this.path = filePath;
-        this.carts = [];
-        this.loadCarts();
-        this.cartIdCounter = this.calculateNextCartId();
+        this.path = filePath
+        this.carts = []
+        this.loadCarts()
+        this.cartIdCounter = this.calculateNextCartId()
     }
 
     loadCarts() {
         try {
-            const data = fs.readFileSync(this.path, 'utf-8');
-            this.carts = JSON.parse(data);
+            const data = fs.readFileSync(this.path, 'utf-8')
+            this.carts = JSON.parse(data)
             if (!Array.isArray(this.carts)) {
-                this.carts = [];
+                this.carts = []
             }
         } catch (error) {
-            console.log(error);
-            this.carts = [];
+            console.log(error)
+            this.carts = []
         }
     }
 
     saveCarts() {
         try {
-            const data = JSON.stringify(this.carts, null, 2);
-            fs.writeFileSync(this.path, data);
+            const data = JSON.stringify(this.carts, null, 2)
+            fs.writeFileSync(this.path, data)
         } catch (error) {
-            console.error('Error al guardar carritos:', error);
+            console.error('Error al guardar carritos:', error)
         }
     }
 
     calculateNextCartId() {
-        const ids = this.carts.map(cart => cart.id);
-        const maxId = Math.max(...ids, 0);
-        return maxId + 1;
+        const ids = this.carts.map(cart => cart.id)
+        const maxId = Math.max(...ids, 0)
+        return maxId + 1
     }
 
-    createCart() {
+    createCart(products) {
         const newCart = {
             id: this.cartIdCounter++,
-            products: []
-        };
+            products
+        }
 
-        this.carts.push(newCart);
-        this.saveCarts();
+        this.carts.push(newCart)
+        this.saveCarts()
 
-        return newCart;
+        return newCart
     }
 
     getCartById(cartId) {
-        const cart = this.carts.find(c => c.id === cartId);
-        return cart || null;
+        const cart = this.carts.find((c) => c.id === cartId)
+        if (!cart) {
+            return "¡¡ERROR!! Carrito no encontrado"
+        }
+        return cart
     }
 
     getProductsInCart(cartId) {
-        const cart = this.getCartById(cartId);
-        return cart ? cart.products : [];
+        const cart = this.getCartById(cartId)
+        return cart ? cart.products : []
     }
 
     addProductToCart(cartId, productId, quantity = 1) {
-        const cart = this.getCartById(cartId);
+        const cart = this.getCartById(cartId)
 
         if (!cart) {
-            console.error("¡¡ERROR!! Carrito no encontrado");
-            return;
+            console.error("¡¡ERROR!! Carrito no encontrado")
+            return
         }
 
-        const existingProduct = cart.products.find(item => item.id === productId);
+        const existingProduct = cart.products.find(item => item.id === productId)
 
         if (existingProduct) {
-            existingProduct.quantity += quantity;
+            existingProduct.quantity += quantity
         } else {
             const newProduct = {
                 id: productId,
                 quantity: quantity
-            };
-            cart.products.push(newProduct);
+            }
+            cart.products.push(newProduct)
         }
 
-        this.saveCarts();
+        this.saveCarts()
+
+        return cart
     }
 }
 
-module.exports = CartManager;
+module.exports = CartManager

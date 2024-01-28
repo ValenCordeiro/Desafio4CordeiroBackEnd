@@ -5,9 +5,6 @@ class ProductManager {
         this.path = filePath
         this.products = []
         this.loadProducts()
-
-        const ids = this.products.map(prod => prod.id)
-        const maxId = Math.max(...ids)
         this.productIdCounter = this.calculateNextProductId()
     }
 
