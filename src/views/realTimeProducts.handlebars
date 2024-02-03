@@ -1,0 +1,55 @@
+<div>
+
+    <h1>Lista de Productos</h1>
+    <ul>
+        {{#each products}}
+
+            <li> Título: {{this.title}} </li>
+            <li> Descripción: {{this.description}} </li>
+            <li> Precio: {{this.price}} </li>
+            <li> Categoría: {{this.category}} </li>
+            <li> Inventario: {{this.stock}} </li>
+            
+        {{/each}}
+    </ul>
+    
+</div>
+
+<div>
+
+    <form action="/api/products" method="post">
+
+        <label> Título </label>
+        <input type="text" name="title">
+        <br>
+
+        <label> Descripción </label>
+        <input type="text" name="description">
+        <br>
+
+        <label> Precio </label>
+        <input type="number" name="price">
+        <br>
+
+        <label> Imagen</label>
+        <input type="text" name="thumbnail">
+        <br>
+
+        <label> Código </label>
+        <input type="text" name="code">
+        <br>
+
+        <label> Inventario </label>
+        <input type="number" name="stock">
+        <br>
+
+
+        <label> Categoría </label>
+        <input type="text" name="category">
+        <br>
+
+        <button type="submit"> Enviar </button>
+
+    </form>
+
+</div>
